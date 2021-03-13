@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button routerLink="/contacto">
+    Ir a Contacto
+  </ion-button>
+
+  <ion-button routerLink="/nosotros">
+    Ir a Nosotros
+  </ion-button>
+
+  <ion-item>
+    <ion-label position="floating">Nombre:</ion-label>
+    <ion-input [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido:</ion-label>
+    <ion-input [(ngModel)]="apellido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Celular:</ion-label>
+    <ion-input [(ngModel)]="celular"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Email:</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+  </ion-item>
+  
+  <ion-button color="success" (click)="guardarDatos()">
+    Guardar
+  </ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let usuario of usuarios; let in = index">
+      
+      <ion-label color='primary'>{{usuario.nombre}}</ion-label>
+      <ion-label color='primary'> {{usuario.apellido}}</ion-label>
+      <ion-label color='primary'> {{usuario.celular}}</ion-label>
+      <ion-label color='primary'> {{usuario.email}}</ion-label>
+      
+      <ion-button color="danger" clear (click)="eliminarDatos(in)"> 
+        <ion-icon name="trash-sharp"></ion-icon>
+      </ion-button>
+
+      <ion-button color="primary" clear (click)="editarDatos(in)">
+        <ion-icon name="pencil-sharp"></ion-icon>
+      </ion-button>
+
+
+    </ion-item>
+  </ion-list> 
+  
+   
+
+</ion-content>
