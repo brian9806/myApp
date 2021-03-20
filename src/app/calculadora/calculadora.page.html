@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button> 
+    </ion-buttons>
+    <ion-title>calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+    <form id="home-form3">
+      <ion-item id="home-input4">
+        <ion-label></ion-label>
+        <ion-input type="text" placeholder="0" name="display" [(ngModel)]="result"></ion-input>
+      </ion-item>
+    </form>
+
+  <div>
+    <ion-grid id="grid">
+
+      <ion-row>
+        <ion-col><ion-button color="secondary " (click)="aritmetic ('%')"> % </ion-button></ion-col>
+
+
+      </ion-row>
+
+      <ion-row>
+        <ion-col><ion-button color="tertiary " (click)="num ('1')"> 1 </ion-button></ion-col>
+        <ion-col><ion-button color="tertiary " (click)="num ('2')"> 2 </ion-button></ion-col>
+        <ion-col><ion-button color="tertiary " (click)="num ('3')"> 3 </ion-button></ion-col>
+        <ion-col><ion-button color="secondary " (click)="aritmetic ('+')"> + </ion-button></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col><ion-button color="tertiary " (click)="num ('4')"> 4 </ion-button></ion-col>
+        <ion-col><ion-button color="tertiary " (click)="num ('5')"> 5 </ion-button></ion-col>
+        <ion-col><ion-button color="tertiary " (click)="num ('6')"> 6 </ion-button></ion-col>
+        <ion-col><ion-button color="secondary " (click)="aritmetic ('-')"> - </ion-button></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col><ion-button color="tertiary " (click)="num ('7')"> 7 </ion-button></ion-col>
+        <ion-col><ion-button color="tertiary " (click)="num ('8')"> 8 </ion-button></ion-col>
+        <ion-col><ion-button color="tertiary " (click)="num ('9')"> 9 </ion-button></ion-col>
+        <ion-col><ion-button color="secondary " (click)="aritmetic ('*')"> * </ion-button></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col><ion-button color="tertiary " (click)="num ('.')"> . </ion-button></ion-col>
+        <ion-col><ion-button color="tertiary " (click)="num ('0')"> 0 </ion-button></ion-col>
+        <ion-col><ion-button color="primary " (click)="igual ()"> = </ion-button></ion-col>
+        <ion-col><ion-button color="secondary " (click)="aritmetic ('/')"> / </ion-button></ion-col>
+        
+      </ion-row>
+         
+
+     
+         
+
+    
+
+      <ion-row>
+        <ion-col size=""><ion-button color="danger" (click)="clear()"> AC</ion-button>  </ion-col>
+      </ion-row>
+
+
+
+      
+    </ion-grid>
+  </div>
+
+</ion-content>
